@@ -11,14 +11,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1453
-NormalPos.bottom=745
-Class=LaTeXView
-Document=Grundlagen.tex
+NormalPos.right=940
+NormalPos.bottom=455
+Class=BibTeXView
+Document=Literatur.bib
 
 [Frame0_View0,0]
-TopLine=0
-Cursor=970
+TopLine=12
+Cursor=1399
 
 [Frame1]
 Flags=0
@@ -29,8 +29,8 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1453
-NormalPos.bottom=745
+NormalPos.right=940
+NormalPos.bottom=455
 Class=LaTeXView
 Document=Einleitung.tex
 
@@ -47,14 +47,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1453
-NormalPos.bottom=745
-Class=BibTeXView
-Document=Literatur.bib
+NormalPos.right=940
+NormalPos.bottom=455
+Class=LaTeXView
+Document=Grundlagen.tex
 
 [Frame2_View0,0]
-TopLine=0
-Cursor=50
+TopLine=9
+Cursor=654
 
 [Frame3]
 Flags=0
@@ -65,13 +65,13 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1453
-NormalPos.bottom=745
+NormalPos.right=940
+NormalPos.bottom=455
 Class=LaTeXView
 Document=Integrationsanforderungen.tex
 
 [Frame3_View0,0]
-TopLine=52
+TopLine=20
 Cursor=3793
 
 [SessionInfo]
