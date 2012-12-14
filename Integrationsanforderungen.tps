@@ -17,8 +17,8 @@ Class=LaTeXView
 Document=Hauptteil.tex
 
 [Frame0_View0,0]
-TopLine=0
-Cursor=1397
+TopLine=47
+Cursor=4222
 
 [Frame1]
 Flags=0
