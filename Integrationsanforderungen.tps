@@ -14,11 +14,11 @@ NormalPos.top=26
 NormalPos.right=940
 NormalPos.bottom=455
 Class=LaTeXView
-Document=Grundlagen.tex
+Document=Ausblick.tex
 
 [Frame0_View0,0]
-TopLine=28
-Cursor=2182
+TopLine=0
+Cursor=628
 
 [Frame1]
 Flags=0
@@ -50,11 +50,11 @@ NormalPos.top=26
 NormalPos.right=940
 NormalPos.bottom=455
 Class=LaTeXView
-Document=Hauptteil.tex
+Document=Hotel.tex
 
 [Frame2_View0,0]
 TopLine=0
-Cursor=40
+Cursor=45
 
 [Frame3]
 Flags=0
@@ -68,11 +68,11 @@ NormalPos.top=26
 NormalPos.right=940
 NormalPos.bottom=455
 Class=LaTeXView
-Document=Einleitung.tex
+Document=Restaurant.tex
 
 [Frame3_View0,0]
-TopLine=0
-Cursor=22
+TopLine=75
+Cursor=5642
 
 [Frame4]
 Flags=0
@@ -86,11 +86,11 @@ NormalPos.top=26
 NormalPos.right=940
 NormalPos.bottom=455
 Class=LaTeXView
-Document=.gitignore
+Document=Integrationsanforderungen.tex
 
 [Frame4_View0,0]
-TopLine=0
-Cursor=17
+TopLine=83
+Cursor=3645
 
 [Frame5]
 Flags=0
@@ -104,13 +104,49 @@ NormalPos.top=26
 NormalPos.right=940
 NormalPos.bottom=455
 Class=LaTeXView
-Document=Integrationsanforderungen.tex
+Document=Grundlagen.tex
 
 [Frame5_View0,0]
-TopLine=20
-Cursor=3793
+TopLine=11
+Cursor=1910
+
+[Frame6]
+Flags=0
+ShowCmd=1
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-1
+MaxPos.y=-1
+NormalPos.left=4
+NormalPos.top=26
+NormalPos.right=940
+NormalPos.bottom=455
+Class=LaTeXView
+Document=Einleitung.tex
+
+[Frame6_View0,0]
+TopLine=13
+Cursor=2096
+
+[Frame7]
+Flags=0
+ShowCmd=1
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-1
+MaxPos.y=-1
+NormalPos.left=4
+NormalPos.top=26
+NormalPos.right=940
+NormalPos.bottom=455
+Class=LaTeXView
+Document=.gitignore
+
+[Frame7_View0,0]
+TopLine=0
+Cursor=17
 
 [SessionInfo]
-FrameCount=6
+FrameCount=8
 ActiveFrame=0
 

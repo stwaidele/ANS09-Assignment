@@ -1,0 +1,58 @@
+\clearpage
+
+\section{Verkauf von Speisen \& Getränken im Restaurant}
+
+Das im Einsatz befindliche POS-System besteht aus einer proprietären Restaurantkasse "`Casio 6000"' (kurz: POS-Terminal oder Terminal), in der sowohl die Stammdaten als auch die im laufenden Betrieb anfallenden Bewegungsdaten gespeichert werden. Auch das Reporting und eine beschränkte Archivierungsfunktion wird erfüllt.
+
+Die Stammdaten basieren auf einer Artikelliste in der neben der Artikelnummer auch eine Beschreibung sowie der Preis gespeichert ist. Aber auch steuerlich relevante Daten wie der Mehrwertsteuersatz sowie Parameter des Customizing (z.B. auf welchem Bondrucker die Bestellung ausgegeben wird) sind hier hinterlegt. 
+
+Nach der Bestellannahme bucht die Servicekraft die gewünschten Artikel (Auswahl per Menü oder Artikelnummer) auf den Tisch der Gäste. Das System speichert automatisch eine eindeutige Bonnummer, den zum Erfassungszeitpunkt gültigen Preis und die Personalnummer der Servicekraft. Diese Daten werden auch auf den ausgedruckten Bons sowie dem intern gespeichertem Journalspeicher dokumentiert.
+
+Des Weiteren werden die angelegten Berichte weitergeführt. Dies ist in der Regel der Umsatzbericht pro Servicekraft und der Warengruppenbericht. Weitere Auswertungen z.B. nach Zeitintervallen können konfiguriert werden. 
+
+\subsection{Schnittstelle POS-System zur Buchhaltung bzw. zum Management}
+\subsubsection{Beschreibung}
+
+Die ausgedruckten Berichte stellen die Schnittstelle zur Buchhaltung und zum Management dar. Zur weiteren Verarbeitung müssen die ausgedruckten Daten in die entsprechenden Systeme eingegeben werden! 
+
+Auch ist zu beachten, dass die Berichtsdaten zwar laufend aktualisiert werden, es jedoch notwendig ist, die Berichte manuell auszudrucken. Hierbei sind zwei Modi möglich: Der X--Abschlag, der die aufgelaufenen Daten auswertet und ausgibt, sowie der Z--Abschlag, der die Register nach dem Ausdruck auf Null setzt. Beiden Modi ist gemeinsam, dass die Auswertung der Daten nur zum Zeitpunkt des Ausdrucks ausgewertet werden. 
+
+So ist ein Tagesbericht tatsächlich nur tatsächlich zwischen dem Ende der letzen Schicht und vor dem Beginn der ersten Schicht des Folgetages möglich. Der Monatsbericht muss nach dem Tagesabschluss des letzten Tags des Monats, vor dem ersten Geschäftsvorgang des Folgemonats durchzuführen. Wir dies nicht beachtet, so wird die Qualität der Daten deutlich verschlechtert.
+
+\subsubsection{Bewertung}
+
+Da die ausgedruckten Daten manuell in das Buchhaltungssystem ("`Lexware Kassenbuch"' bzw. "`Lexware Faktura+"') eingegeben werden müssen, liegt hier ein Medienbruch vor. Das gleiche gilt für die Datenübergabe an das Management, wo weitere Auswertungen, Planungen und Kalkulationen im Tabellenverarbeitungssystem erstellt werden.
+
+Dieser Medienbruch wird auch dadurch nicht behoben, dass im Back--Office die Software "`Casio Easy Reporting"' (kurz: CEP)im Einsatz ist, die auf die entsprechenden Daten der Kasse zugreifen kann. Dieser Zugriff geschieht nämlich auch nur manuell und in unstrukturierter Form, so dass auch hier umfangreiche Importmaßnahmen notwendig sind und auch weiterhin die Notwendigkeit besteht, die Auswertungen zu den entsprechenden Zeitpunkten pünktlich durchzuführen.
+
+Eine integrierte Datenspeicherung würde hier einerseits eine Erleichterung der täglichen Verwaltungsaufgaben mit sich bringen und andererseits auch die Qualität der Berichte sicherstellen, da diese nicht mehr an den Periodenübergängen erstellt werden müssen. 
+
+\subsection{Schnittstelle Management zum POS--System}
+\subsubsection{Beschreibung}
+
+Sowohl das Angebot an Speisen und Getränken als auch die Preise werden vom Management bestimmt. Grundlage heirfür ist die Kalkukulation, die im Tabellenverarbeitungssystem durchgeführt wird. Die ermittelten Preise werden dann in der Schnittstellenanwendung CEP dem jeweiligen Artikel zugeordnet. Hier werden auch Einstellungen bezüglich der Mehrwertsteuer, eventuellen Optionen (z.B. "`medium"' oder "`durch"') und den zu benutzten Bondruckern getätigt.
+
+Das POS--System wird allerdings auch ohne die Schnittstellensoftware verkauft. Daher können die gleichen Einstellungen auch direkt am POS--Terminal getätigt werden. Von dieser Möglichkeit wird gebrauch gemacht, wenn einzelne Preise schnell geändert werden sollen, z.B. auch bei der täglichen Eingabe der Preise vom Chefkoch bestimmten Preise für das Tagesmenü durch die Servierkräfte.
+
+Obwohl das POS-Terminal und die Software CEP vom gleichen Hersteller stammen und aufeinander abgestimmt sind, werden die jeweiligen Daten unabhängig voneinander gespeichert. Eine Übertragung vom bzw. zum Terminal findet nur nach einem entsprechenden Befehl statt. Der Datenabgleich muss somit immer manuell angestoßen werden. Eventuelle Syncronisierungskonflikte werden hierbei nicht angezeigt. Hierdurch können aktualisierte Daten unbemerkt wieder durch alte Versionen überschrieben werden.
+
+\subsubsection{Bewertung}
+
+Da hier deutlich weniger bzw. seltener Daten übertragen werden ist der Medienbruch zwischen Management und Restaurantkasse ist weniger gravierend als der im vorhergehenden Abschnitt beschriebene zur Buchhaltung.
+Jedoch bringt die redundante Datenhaltung weitreichende und schwer zu erkennende Syncronisationsprobleme mit sich. 
+
+Eine integrierte Lösung würde hier sowohl eine Arbeitserleichterung als auch Schutz vor Datenverlust bringen.
+
+\subsection{Schnittstelle POS--System zur Hotelsoftware}
+\subsubsection{Beschreibung}
+
+Wenn ein Hotelgast seine Restaurantrechnung zusammen mit seinem Zimmer bezahlen möchte, dann muss diese sowohl im POS--Terminal als auch im Hotelprogramm entsprechend verbucht werden. Hierbei fließen Daten in beide Richtungen: Zunächst meldet das Hotelprogramm alle belegten Zimmer mit den Gastnamen an die Restaurantkasse. Diese stehen dann dem Servicepersonal in einer Auswahlliste zur Verfügung. Nach der Auswahl der Zimmernummer wird der Rechnungsbetrag, der Zeitstempel sowie die Rechnungsnummer an das Front--Office--System übermittelt, welches die entsprechende Buchung auf der Zimmerrechnung vornimmt.
+
+Hierzu arbeiten zwei Progrmmodule zusammen: Eines ist Bestandteil der Schnittstellensoftware des POS--Systems, das andere ist Bestandteil der Hotelsoftware. Die Daten werden in ein festgelegtes Format gewandelt und über zwei Dateien ausgetauscht. Zeitgleich wird der Beleg ausgedruckt und dem Gast zur Prüfung und Unterschrift vorgelegt.
+
+Eine weitere Kommunikation findet nicht statt. Wird der so abgerechnete Tisch im POS--Terminal wieder reaktiviert (i.d.R. ist das notwendig, wenn Fehler korrigiert werden müssen), dann wird die Verbuchung im Hotelsystem nicht wieder automatisch rückgängig gemacht. Die Korrektur muss also von der Servicekraft an den Rezeptionsmitarbeiter gemeldet werden, damit diese im Hotelprogramm manuell nachvollzogen werden kann.
+
+\subsubsection{Bewertung}
+
+Hier kommt im Vergleich zur ebenfalls denkbaren manuellen Datenübernahme zwischen den Systemen bereits eine integrierte Lösung zum Einsatz, die in den meisten Fällen eine korrekte und konsistente Rechnungsstellung und Buchhaltung gewärleistet. Lediglich in Sonderfällen ist ein manuelles Eingreifen möglich.
+
