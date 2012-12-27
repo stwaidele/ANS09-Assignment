@@ -1,8 +1,37 @@
 \clearpage
 \section{Hotelreservierung}
 
+Das im Einsatz befindliche Property Management System (PMS) ist die Hotelsoftware "`HS/3"'. Darin werden verschiedene Funktionen der Module "`Rezeption"', "`Finanzen"', "`Marketing"' und "`Reporting"' unter einer einheitlichen Programmoberfläche vereint. Die Module nutzen auch eine einheitliche Datenbasis in Form einer SQL--Datenbank, welche durch ein nur dem Hersteller bekannten Passworts gegen Zugriffe von außen geschützt ist.
 
-\subsection{Schnittstelle ...}
+Es handelt sich hierbei also um ein System, in dem die Prinzipien der Daten--, Funktions-- und Programmintegration berücksichtigt. Dies bildet auch den Alltag des beschriebenen Betriebs ab, da in dieser Betriebsgröße die abgedeckten Funktionen nicht von getrennten Abteilungen, sondern von einem oder wenigen abteilungsübergreifend eingesetzten Mitarbeitern ausgeführt werden.
+
+Für einen reinen Hotelbetrieb ohne weitere Betriebszweige ist dieses System auch vom Funktionsumfang her ausreichend. Es können die Aufgaben der Buchhaltung in Form eines Kassenbuchs und einer Debitorenverwaltung erfüllt werden. Außerdem wird das Management durch eine Reihe von Auswertungen und Berichten unterstützt. Integrationsbedarf entsteht also hauptsächlich dadurch, dass der Betrieb durch seine Größe mehrere Betriebszweige vereint.
+
+\subsection{Schnittstelle zur Buchhaltung}
 \subsubsection{Beschreibung}
+Da die Buchhaltungsdaten des Restaurants und der anderen Betriebszweige nicht in das PMS eingegeben werden können, müssen die Daten des Hotelprogramms an die Buchhaltung übergeben werden. Dies geschieht auch hier in Form von ausgedruckten Tages-- und Monatsberichten, die ins Buchhaltungssystem eingegeben werden müssen. 
+
+\subsubsection{Bewertung}
+Hier liegt ein Medienbruch vor. Die Buchhaltungssoftware unterstützt zwar den Import der Daten im DATEV-Format. Die Hotelsoftware bietet jedoch keinen entsprechenden Export an.
+
+Somit treten hier die Probleme der manuellen Datenübernahme zu Tage: Arbeitsaufwand, Fehleranfälligkeit und Inkonsistenzen wegen doppelter Datenhaltung.
+
+\subsection{Schnittstelle zum Management}
+\subsubsection{Beschreibung}
+Aufgrund der integrierten Informations- und Berichtsfunktionen ist hier zunächst keine Schnittstelle notwendig. Falls die mit dem Programm ausgelieferten Berichte nicht ausreichen, können vom Hersteller weitere, individuell programmierte Berichte eingebunden werden. Im Gegensatz zum Restaurant lassen sich diese Berichte jederzeit für beliebige Perioden generieren.
+
+Sollen die so aus den Bewegungsdaten gewonnenen Auswertungen weiter verarbeitet werden, ist der Export in eine Tabellenkalkulation möglich.  
+
+\subsubsection{Bewertung}
+
+Aufgrund des in diesem Bereich hohen Integrationsgrads sind für die Information des Hotelmanagement keine weiteren Schnittstellen oder Integrationsschritte notwendig.  
+
+Sobald jedoch die Hotelinformationen mit den Daten der anderen Betriebszweigen verknüpft werden sollen, so besteht auch hier ein Medienbruch und es ist eine manuelle Datenübernahme notwendig. 
+
+\subsection{Schnittstelle zu Buchungsportalen im Internet}
+\subsubsection{Beschreibung}
+
+
+
 \subsubsection{Bewertung}
 Bewertung der Schnittstellen anhand der Anforderungsstufen und Integrationsgegenständen.
