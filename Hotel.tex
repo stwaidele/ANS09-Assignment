@@ -29,11 +29,30 @@ Aufgrund des in diesem Bereich hohen Integrationsgrads sind für die Information 
 Sobald jedoch die Hotelinformationen mit den Daten der anderen Betriebszweigen verknüpft werden sollen, so besteht auch hier ein Medienbruch und es ist eine manuelle Datenübernahme notwendig. 
 
 \subsection{Schnittstelle zu Buchungsportalen im Internet}
+
+Das Internet hat sich zu einem bedeutenden Vertriebsweg für Hotelbuchungen entwickelt. Hierbei ist zu beachten, dass es sich hierbei nicht um einen homogenen Vertriebskanal handelt, sondern verschiedene Vertriebskanäle nutzen das Internet als Medium. Aufgrund der großen Anzahl von beteiligten Geschäftspartnern ist der mögliche Nutzen eines hohen Integrationsniveaus besonders groß.
+
 \subsubsection{Beschreibung}
 
-Internet, wichtig!
+Hotelgäste buchen im Internet i.d.R. über das Web--Interface einer Online--Buchungsplattform. Hierfür ist es notwendig, dass das Hotel seine verfügbaren Zimmer und die entsprechenden Preise (Raten) für jede buchbare Nacht an die Buchungsplattform meldet. Die getätigten Buchungen werden dann an das Hotel gemeldet und dort im Front--Office--System eingebucht. Bei manueller Meldung besteht hier bereits bei einer Buchungsplattform die Gefahr, dass aufgrund von Verzögerungen im Ablauf zu Überbuchungen oder entgangenen Umsätzen kommen.
 
+Im betrachteten Betrieb werden die beiden Buchungsplattformen "`HRS.de"' und "`Booking.com"' genutzt. Des weiteren ist das Hotel über ein Buchungsformular auf der eigenen Website buchbar. Somit müssen drei Systeme mit möglichst aktuellen Daten des Front--Officesystems versorgt werden.
 
+Diese Aufgabe wird von einem weiteren System, dem Channel--Manager übernommen. Das Hotelprogramm sendet Raten und Verfügbarkeiten nur an bzw. empfängt Buchungen nur von diesem einen System. Der Channel--Manager (hier: "`CultSwich"') ist somit die Schnittstelle zu den verschiedenen Buchungssystemen. Er stellt auch die Buchungsmaske zur Verfügung, die auf der hoteleigenen Website eingebunden werden kann. Die Buchungen der Gäste werden über den Channel--Manager direkt in das Front--Officesystem eingebucht.
+
+Diese Datenfluss ist in der folgenden Abbildung skizziert. Der Vollständigkeit wegen enthält diese Zeichnung noch die Direktbuchung, bei der der Gast persönlich, per Telefon oder auch schriftlich (Brief, Fax oder E--Mail) mit dem Hotel in Kontakt tritt. Als weiterer Buchungsweg ist auch die Anbindung von Reisebüros dargestellt.
+
+\begin{figure}
+\includegraphics[width=\hsize]{IH}
+\caption[Informationsflüsse bei Hotelbuchungen]{Informationsflüsse bei Hotelbuchungen, basierend auf \cite{cultuzz}}
+\end{figure}
 
 \subsubsection{Bewertung}
-Bewertung der Schnittstellen anhand der Anforderungsstufen und Integrationsgegenständen.
+
+Wie in Abbildung 1 zu sehen ist, stehen zwischen Hotel und Gast je nach Buchungsweg bis zu drei Mittler. Jedes dieser Systeme wird von seperaten Unternehmen betrieben, womit sich mit Hotel und Gast somit eine Buchungskette mit fünf beteiligten Parteien und deren Interessen besteht.
+
+Bei dieser Prozessintegration über mehrere Unternehmensgrenzen hinweg spielt der Channel--Manager eine zentrale Rolle: Zunächst ist er diejenige Komponente des Systems, die für den täglichen Arbeitsablauf im Hotel den größten Nutzen bringt. Aufgrund der Tatsache, dass Buchungsplattformen keine direkte Schnittstelle zum Hotelprogrammen anbieten, wird durch den Channel--Manager die Automatisierung des Datenabgleichs überhaupt erst möglich. Desweiteren wird die Anzahl der notwendigen Schnittstellen von einer pro Buchungskanal auf eine einzige für den Channel--Manager reduziert.
+
+Die Tatsache, dass der Datenaustausch bei den eingesetzten Systemen mit dem XML--Branchenstandard OTA von statten geht, ist für den Betrieb zunächst nicht von direktem Interesse. Indirekt werden durch das einheitliche XML--Schema die beteiligten Komponenten eher austauschbar. Für den Channel--Manager ist es somit ohne Probleme Möglich, weitere Buchungskanäle auf Basis dieses Schemas zu unterstützen.
+
+Das Einbinden weiterer vom Channel--Manager unterstützter Buchungskanäle ist somit technisch somit kein Problem. Es ist  im wesentlichen eine Entscheidung der Hotelleitung, die zwischen den zu erwartenden Buchungen und der Provision des Anbieters abwägen muss.
