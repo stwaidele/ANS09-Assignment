@@ -1,4 +1,4 @@
-\clearpage
+%\clearpage
 \section{Grundlagen}
 
 \subsection{Vorstellung des Unternehmens}
@@ -16,9 +16,14 @@ der Betrieb als "`kleines Hotel"' einzustufen. Mit ca. 30 Mitarbeitern ist das U
 	
 Trotz deutlichen Unterschieden in der Benutzung und in der Wahrnehmung können die Begriffe POS-System und Front--Office System somit abteilungsspezifische Bezeichnungen für äquivalente Systeme gesehen werden, bei denen der Kundenauftrag für die weitere Verarbeitung per EDV erfasst wird. 
 
-\item \textbf{PMS:} Property Management System --- Softwaresystem zur Verwaltung von Übernachtungsmöglichkeiten. Hierbei kann es sich um die wenigen Zimmer einer kleiner Pension bis hin zur einheitlichen Verwaltung der unterschiedlichen Standorte großer Hotelketten handeln.
+\item \textbf{PMS:} Property Management System oder \textbf{Hotelsoftware} --- Softwaresystem zur Verwaltung von Übernachtungsmöglichkeiten. Hierbei kann es sich um die wenigen Zimmer einer kleinen Pension bis hin zur einheitlichen Verwaltung der unterschiedlichen Standorte großer Hotelketten handeln.
 	\item \textbf{Hotel-- und Restaurantinformationssystem (HRIS):} Betriebliches Informationssystem das die Anforderungen eines Hotels mit Restaurantbetriebs erfüllt.
-	\item \textbf{Service Oriented Architecture / SOA:} TODO: Definition!!!
+
+	\item \textbf{Middleware:} Zwischenschicht eines Softwaresystems, welche Verteilungs--, Kon\-ver\-tierungs-- und Ver\-ein\-fach\-ungs\-funk\-tionen übernimmt.\footnote{vgl. \cite{itwmiddle}}
+	\item \textbf{Hub and Spokes Architektur:} Die Middleware sammelt zentral alle Anfragen und leitet diese dann an die ausführenden Module weiter. Hierduch entsteht ein sternförmiges Netz nach dem Vorbild einer Wagenrads. (Hub: Radnabe, Spoke: Speiche)\footnote{vgl. \cite[12]{graeff}}
+	\item \textbf{Busarchitektur:} Hier stellen die an einem Prozess beteiligten Komponenten die Dateninhalte auf einem gemeinsamen Bus zur Verfügung, wo sie von den jeweiligen Abnehmern selbst gelesen werden. Im Gegensatz zur Hub and Spokes Architektur ist hierbei keine zentrale Komponente für die Verteilung der Daten zuständig.\footnote{vgl. \cite[13]{graeff}}
+	\item \textbf{SOA:} Service Oriented Architecture --- Systemarchitektur, bei der das Zusammenspiel einzelner, voneinander unabhängiger Dienste so geregelt ist, dass diese zum Gesamtsystem kombinierbar sind. Einzelne Dienstanbieter können hierbei aufgrund von definierten Schnittstellen ausgetauscht werden.\footnote{vgl. \cite{gablersoa}}
+	\item \textbf{OTA:} OpenTravel\footnote{http://www.opentravel.org/} (ehem. Open Travel Alliance) --- Branchenverband und Herausgeber des OTA XML-Schemas, welches den Nachrichten-- und Datenaustausch zwischen touristischer Software standardisiert.
 \end{itemize}
 
 \subsection{Anforderungsstufen}
@@ -27,15 +32,17 @@ Im Rahmen dieser Arbeit werden die Integrationsanforderungen des Hotel-- und Res
 
 \begin{itemize}
 	\item Minimalanforderung: Diese beschreiben den Mindestgrad an Integration die für einen Betrieb dieser Größenordnung wirtschaftlich Sinnvoll ist. 
-	\item Momentan umgesetzte Ingegrationsanforderungen: Dies beschreibt den Ist--Zustand im untersuchten Betrieb.
+	\item Momentan umgesetzte Integrationsanforderungen: Dies beschreibt den Ist-Zustand im untersuchten Betrieb.
 	\item Optimalanforderungen: Hier werden die Möglichkeiten eines hochintegrierten HRIS aufgezeigt.
 \end{itemize}
+
+Die Minimalanforderungen wird hierbei hauptsächlich in den Schnittstellenbeschreibungen betrachtet werden. Der Ist--Zustand findet sich sowohl in der jeweiligen Beschreibung als auch in der Bewertung. Die Optimalanforderungen werden in den Schnittstellenbewertungen sowie im Kapitel 5 skizziert.
 
 \subsection{Integration}
 
 Integration bedeutet die Verbindung einer Vielheit zu einer Einheit.\footnote{vgl. \cite{dudenint}}
 
-In der Informatik ist demnach Integration als die Verbindung von mehreren getrennten Anwendungssystemen zu einem integrierten Anwendungssystem, welches Aufgaben aus verschiedenen Funktionsbereichen und die verschiedenen Bereiche intern zu einem Gesamtsystem verknüpft. Hierbei werden Daten möglichst früh erfasst und dann systemintern verarbeitet, gespeichert und weitergeleitet.\footnote{vgl. \cite{staud}, S.30}
+In der Informatik ist demnach Integration als die Verbindung von mehreren getrennten Anwendungssystemen zu einem integrierten Anwendungssystem, welches Aufgaben aus verschiedenen Funktionsbereichen und die verschiedenen Bereiche intern zu einem Gesamtsystem verknüpft. Hierbei werden Daten möglichst früh erfasst und dann systemintern verarbeitet, gespeichert und weitergeleitet.\footnote{vgl. \cite[30]{staud}}
 
 Die Integration von Informationssystemen kann auf verschiedenen Arten geschehen. Hierbei sind die unterschiedlichen  Integrationsgegenstände jeweils mit den Integrationsrichtungen sowie die der Integrationsreichweite zu betrachten.
 
@@ -45,7 +52,7 @@ vgl. \cite{staud} Seite 36f
 
 \begin{itemize}
 	\item \textbf{Datenintegration:} Hierbei werden die Daten meherer Betriebsbereiche zusammengeführt, um dann mit verschiedenen Programmen auf die gemeinsame Datenbasis zugreifen zu können. \footnote{vgl. \cite{gablerdint}}
-	\item \textbf{Funktionsintegration:} Hierbei werden meherere betriebliche Teilfunktionen zusammengeführt. So können vorher getrennte Aufgaben anschließend an einem Arbeitsplatz ausgeführt werden. \footnote{\cite{gablerfint}}
+	\item \textbf{Funktionsintegration:} Hierbei werden meherere betriebliche Teilfunktionen zusammengeführt. So können vorher getrennte Aufgaben anschließend an einem Arbeitsplatz ausgeführt werden. \footnote{vgl. \cite{gablerfint}}
 	\item \textbf{Prozessintegration:} Informationstechnische Verbindung zwischen einzelnen Vorgängen, z.B. Auftragserfassung und Materialbeschaffung.
 	\item \textbf{Methodenintegration:} Die einzelnen Funktionen werden so gesteltet, dass die Ergebnisse von Funktionen direkt als Eingabe der nächsten Funktionen genutzt werden können.
 	\item \textbf{Programmintegration:} Realisierung der aufeinander abgestimmten Softwaremodule. Aufgabe des Software--Engineering.
@@ -53,8 +60,8 @@ vgl. \cite{staud} Seite 36f
 
 \subsection{Integrationsrichtungen}
 
-Bei der horizontalen Integration werden (Teil)prozesse einer Managementebene aus verschiedenen Funktionsbereichen des Unternehmens miteinander verknüpft. Bei der Vertikalen Integration werden die Systeme über die grenzen der Managementebenen hinaus verknüpft, so dass z.B. das Führungsinformationssystem direkt auf die Daten der Produktion zugreigen kann.\footnote{vgl. \cite{staud} Seite 37}
+Bei der horizontalen Integration werden (Teil)prozesse einer Managementebene aus verschiedenen Funktionsbereichen des Unternehmens miteinander verknüpft. Bei der Vertikalen Integration werden die Systeme über die grenzen der Managementebenen hinaus verknüpft, so dass z.B. das Führungsinformationssystem direkt auf die Daten der Produktion zugreigen kann.\footnote{vgl. \cite[37]{staud}}
 
 \subsection{Integrationsreichweite}
 
-Hierunter versteht man die länge der Integrierten Prozessketten. Dies beginnt von abteilungsinternen Integrationsschritten über die Integration von Vorgängen über mehrere Abteilungen hinweg, bis hin zu Unternehmensübergreifenden Projekten zum Suppy Chain Management, in denen sowohl Zulieferer als auch Kunden beteiligt sein können.
+Hierunter versteht man die länge der Integrierten Prozessketten. Dies beginnt von abteilungsinternen Integrationsschritten über die Integration von Vorgängen über mehrere Abteilungen hinweg, bis hin zu Unternehmensübergreifenden Projekten zum Supply Chain Management, in denen sowohl Zulieferer als auch Kunden beteiligt sein können.

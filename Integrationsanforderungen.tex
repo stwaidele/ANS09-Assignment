@@ -46,7 +46,6 @@ bibliography=totoc
 \usepackage{lmodern} %Type1-Schriftart für nicht-englische Texte
 \usepackage{fancyhdr}
 
-\usepackage{natbib}
 %\usepackage{cite}
 %\renewcommand{\citeleft}{}
 %\renewcommand{\citeright}{}
@@ -67,9 +66,11 @@ bibliography=totoc
 %% können Sie u.a. folgende Grafikformate verwenden:
 %%   .eps  .ps  .bmp  .pict  .pntg
 
-
 %% Bibliographiestil %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{natbib}
+\usepackage[style=authortitle-icomp,backend=bibtex8]{biblatex}
+\usepackage[babel,german=quotes]{csquotes}
+%\addbibresource{Literatur.bib}
+\bibliography{./Literatur}
 
 \begin{document}
 \parskip=1em
@@ -88,6 +89,7 @@ bibliography=totoc
 %\end{titlepage}
 
 %% Erzeugung von Verzeichnissen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{tocdepth}{2}
 \tableofcontents			% Inhaltsverzeichnis
 %\listoftables				% Tabellenverzeichnis
 \listoffigures				% Abbildungsverzeichnis
@@ -106,8 +108,11 @@ bibliography=totoc
 
 %% Bibliographie unter Verwendung von dinnat %%%%%%%%%%%%%%%%%%%%%%%%%%
 %\setbibpreamble{Präambel}		% Text vor dem Verzeichnis
-\bibliographystyle{natdin}
+%\bibliographystyle{natdin}
 %\bibliographystyle{plaindin}
-\bibliography{Literatur}	% Sie benötigen eine *.bib-Datei
+%\bibliography{Literatur}	% Sie benötigen eine *.bib-Datei
+
+%% Bibliographie unter Verwendung von BibLaTeX %%%%%%%%%%%%%%%%%%%%%%%%%%
+\printbibliography
 
 \end{document}

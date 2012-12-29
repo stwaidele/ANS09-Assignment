@@ -1,18 +1,20 @@
-\clearpage
+%\clearpage
 \section{Hotelreservierung}
 
-Das im Einsatz befindliche Property Management System (PMS) ist die Hotelsoftware "`HS/3"'. Darin werden verschiedene Funktionen der Module "`Rezeption"', "`Finanzen"', "`Marketing"' und "`Reporting"' unter einer einheitlichen Programmoberfläche vereint. Die Module nutzen auch eine einheitliche Datenbasis in Form einer SQL--Datenbank, welche durch ein nur dem Hersteller bekannten Passworts gegen Zugriffe von außen geschützt ist.
+Das im Einsatz befindliche Property Management System\footnote{"`HS/3 Hotelsoftware"'} vereint verschiedene Funktionen der Module "`Rezeption"', "`Finanzen"', "`Marketing"' und "`Reporting"' unter einer einheitlichen Programmoberfläche. Die Module nutzen auch eine einheitliche Datenbasis in Form einer SQL--Datenbank, welche durch ein nur dem Hersteller bekannten Passworts gegen Zugriffe von außen geschützt ist.
 
 Es handelt sich hierbei also um ein System, in dem die Prinzipien der Daten--, Funktions-- und Programmintegration berücksichtigt. Dies bildet auch den Alltag des beschriebenen Betriebs ab, da in dieser Betriebsgröße die abgedeckten Funktionen nicht von getrennten Abteilungen, sondern von einem oder wenigen abteilungsübergreifend eingesetzten Mitarbeitern ausgeführt werden.
 
 Für einen reinen Hotelbetrieb ohne weitere Betriebszweige ist dieses System auch vom Funktionsumfang her ausreichend. Es können die Aufgaben der Buchhaltung in Form eines Kassenbuchs und einer Debitorenverwaltung erfüllt werden. Außerdem wird das Management durch eine Reihe von Auswertungen und Berichten unterstützt. Integrationsbedarf entsteht also hauptsächlich dadurch, dass der Betrieb durch seine Größe mehrere Betriebszweige vereint.
 
+Gäste haben die Möglichkeit, Zimmer direkt beim Hotel, über ein Buchungsformular auf der hoteleigenen Website oder über die Buchungsportale "`HRS.de"' bzw. "`Booking.com"' zu reservieren.
+
 \subsection{Schnittstelle zur Buchhaltung}
 \subsubsection{Beschreibung}
-Da die Buchhaltungsdaten des Restaurants und der anderen Betriebszweige nicht in das PMS eingegeben werden können, müssen die Daten des Hotelprogramms an die Buchhaltung übergeben werden. Dies geschieht auch hier in Form von ausgedruckten Tages-- und Monatsberichten, die ins Buchhaltungssystem eingegeben werden müssen. 
+Da die Buchhaltungsdaten des Restaurants und der anderen Betriebszweige nicht in das PMS eingegeben werden können, müssen die Daten des Hotelprogramms an die Buchhaltung übergeben werden. Dies geschieht auch hier in Form von ausgedruckten Tages-- und Monatsberichten, die ins Buchhaltungssystem eingetragen werden. 
 
 \subsubsection{Bewertung}
-Hier liegt ein Medienbruch vor. Die Buchhaltungssoftware unterstützt zwar den Import der Daten im DATEV-Format. Die Hotelsoftware bietet jedoch keinen entsprechenden Export an.
+Hier liegt ein \textbf{Medienbruch} vor. Die Buchhaltungssoftware unterstützt zwar den Import der Daten im DATEV-Format. Die Hotelsoftware bietet jedoch keinen entsprechenden Export an.
 
 Somit treten hier die Probleme der manuellen Datenübernahme zu Tage: Arbeitsaufwand, Fehleranfälligkeit und Inkonsistenzen wegen doppelter Datenhaltung.
 
@@ -24,9 +26,9 @@ Sollen die so aus den Bewegungsdaten gewonnenen Auswertungen weiter verarbeitet 
 
 \subsubsection{Bewertung}
 
-Aufgrund des in diesem Bereich hohen Integrationsgrads sind für die Information des Hotelmanagement keine weiteren Schnittstellen oder Integrationsschritte notwendig.  
+Aufgrund des in diesem Bereich \textbf{hohen Integrationsgrads} sind für die Information des Hotelmanagement keine weiteren Schnittstellen oder Integrationsschritte notwendig.  
 
-Sobald jedoch die Hotelinformationen mit den Daten der anderen Betriebszweigen verknüpft werden sollen, so besteht auch hier ein Medienbruch und es ist eine manuelle Datenübernahme notwendig. 
+Sobald jedoch die Hotelinformationen mit den Daten der anderen Betriebszweigen verknüpft werden sollen, so besteht auch hier ein Medienbruch und es ist eine manuelle Datenübernahme notwendig. Dies gilt auch für den Einsatz von EDV--gestützen Managementsystemen z.B. für das Revenue-- oder Yield--Management zur Optimierung der Kombination Preis--Auslastung des Hotels\footnote{vgl. \cite[8]{goerlich}}.
 
 \subsection{Schnittstelle zu Buchungsportalen im Internet}
 
@@ -34,25 +36,31 @@ Das Internet hat sich zu einem bedeutenden Vertriebsweg für Hotelbuchungen entwi
 
 \subsubsection{Beschreibung}
 
-Hotelgäste buchen im Internet i.d.R. über das Web--Interface einer Online--Buchungsplattform. Hierfür ist es notwendig, dass das Hotel seine verfügbaren Zimmer und die entsprechenden Preise (Raten) für jede buchbare Nacht an die Buchungsplattform meldet. Die getätigten Buchungen werden dann an das Hotel gemeldet und dort im Front--Office--System eingebucht. Bei manueller Meldung besteht hier bereits bei einer Buchungsplattform die Gefahr, dass aufgrund von Verzögerungen im Ablauf zu Überbuchungen oder entgangenen Umsätzen kommen.
+Hotelgäste buchen im Internet i.d.R. über das Web--Interface einer Online--Buchungs\-plattform. Hierfür ist es notwendig, dass das Hotel seine verfügbaren Zimmer und die entsprechenden Preise (Raten) für jede buchbare Nacht an die Buchungsplattform meldet. Die getätigten Buchungen werden dann an das Hotel weitergegeben und dort im Front--Office--System eingebucht. Hierbei ist beachtenswert, dass das Buchungsportal die Zimmerreservierung dem Gast gegenüber alleine aufgrund der gemeldeten Verfügbarkeit bestätigt. Bei manueller Meldung besteht hier bereits bei einer Buchungsplattform die Gefahr, dass aufgrund von Verzögerungen im Ablauf zu Überbuchungen oder entgangenen Umsätzen kommen.
 
-Im betrachteten Betrieb werden die beiden Buchungsplattformen "`HRS.de"' und "`Booking.com"' genutzt. Des weiteren ist das Hotel über ein Buchungsformular auf der eigenen Website buchbar. Somit müssen drei Systeme mit möglichst aktuellen Daten des Front--Officesystems versorgt werden.
+Im betrachteten Betrieb werden zwei Buchungsplattformen\footnote{"`HRS.de"' und "`Booking.com"'} genutzt. Des weiteren ist das Hotel über ein Buchungsformular auf der eigenen Website\footnote{Buchungsformular unter http://krone-neuenburg.de/hotel/reservation/} buchbar. Somit müssen drei Systeme mit möglichst aktuellen Daten des Front--Officesystems versorgt werden.
 
-Diese Aufgabe wird von einem weiteren System, dem Channel--Manager übernommen. Das Hotelprogramm sendet Raten und Verfügbarkeiten nur an bzw. empfängt Buchungen nur von diesem einen System. Der Channel--Manager (hier: "`CultSwich"') ist somit die Schnittstelle zu den verschiedenen Buchungssystemen. Er stellt auch die Buchungsmaske zur Verfügung, die auf der hoteleigenen Website eingebunden werden kann. Die Buchungen der Gäste werden über den Channel--Manager direkt in das Front--Officesystem eingebucht.
+Diese Aufgabe wird von einem weiteren System, dem Channel--Manager übernommen. Das Hotelprogramm sendet Raten und Verfügbarkeiten nur an bzw. empfängt Buchungen nur von diesem einen System. Der Channel--Manager\footnote{"`CultSwich"'} ist somit die Schnittstelle zu den verschiedenen Buchungssystemen. Er stellt auch die Buchungsmaske zur Verfügung, die auf der hoteleigenen Website eingebunden werden kann. Die Buchungen der Gäste werden über den Channel--Manager direkt in das Front--Officesystem eingebucht.
 
-Diese Datenfluss ist in der folgenden Abbildung skizziert. Der Vollständigkeit wegen enthält diese Zeichnung noch die Direktbuchung, bei der der Gast persönlich, per Telefon oder auch schriftlich (Brief, Fax oder E--Mail) mit dem Hotel in Kontakt tritt. Als weiterer Buchungsweg ist auch die Anbindung von Reisebüros dargestellt.
+Dieser Datenfluss ist in der folgenden Abbildung skizziert. Der Vollständigkeit wegen enthält diese Zeichnung noch die Direktbuchung, bei der der Gast persönlich, per Telefon oder auch schriftlich (Brief, Fax oder E--Mail) mit dem Hotel in Kontakt tritt. Als weiterer Buchungsweg ist auch die Anbindung von Reisebüros dargestellt.
 
 \begin{figure}
 \includegraphics[width=\hsize]{IH}
 \caption[Informationsflüsse bei Hotelbuchungen]{Informationsflüsse bei Hotelbuchungen, basierend auf \cite{cultuzz}}
 \end{figure}
 
+
 \subsubsection{Bewertung}
 
-Wie in Abbildung 1 zu sehen ist, stehen zwischen Hotel und Gast je nach Buchungsweg bis zu drei Mittler. Jedes dieser Systeme wird von seperaten Unternehmen betrieben, womit sich mit Hotel und Gast somit eine Buchungskette mit fünf beteiligten Parteien und deren Interessen besteht.
+Wie in Abbildung 1 zu sehen ist, stehen zwischen Hotel und Gast je nach Buchungsweg bis zu drei Mittler. Jedes dieser Systeme wird von seperaten Unternehmen betrieben, womit sich mit Hotel und Gast somit eine Buchungskette mit fünf beteiligten Parteien und deren Interessen besteht. Dieser Prozess läuft hochintegriert ab. Die Daten werden früh (direkt vom Gast) erfasst und anschließend ohne weitere Benutzereingriffe bis hin zum PMS weitergeleitet.
 
-Bei dieser Prozessintegration über mehrere Unternehmensgrenzen hinweg spielt der Channel--Manager eine zentrale Rolle: Zunächst ist er diejenige Komponente des Systems, die für den täglichen Arbeitsablauf im Hotel den größten Nutzen bringt. Aufgrund der Tatsache, dass Buchungsplattformen keine direkte Schnittstelle zum Hotelprogrammen anbieten, wird durch den Channel--Manager die Automatisierung des Datenabgleichs überhaupt erst möglich. Desweiteren wird die Anzahl der notwendigen Schnittstellen von einer pro Buchungskanal auf eine einzige für den Channel--Manager reduziert.
+Bei dieser \textbf{Prozessintegration über mehrere Unternehmensgrenzen} hinweg spielt der Channel--Manager eine zentrale Rolle: Zunächst ist er diejenige Komponente des Systems, die für den täglichen Arbeitsablauf im Hotel den größten Nutzen bringt. Aufgrund der Tatsache, dass Buchungsplattformen keine direkte Schnittstelle zum Hotelprogrammen anbieten, wird durch den Channel--Manager die Automatisierung des Datenabgleichs überhaupt erst möglich. Desweiteren wird die Anzahl der notwendigen Schnittstellen von einer pro Buchungskanal auf eine einzige für den Channel--Manager reduziert.
 
-Die Tatsache, dass der Datenaustausch bei den eingesetzten Systemen mit dem XML--Branchenstandard OTA von statten geht, ist für den Betrieb zunächst nicht von direktem Interesse. Indirekt werden durch das einheitliche XML--Schema die beteiligten Komponenten eher austauschbar. Für den Channel--Manager ist es somit ohne Probleme Möglich, weitere Buchungskanäle auf Basis dieses Schemas zu unterstützen.
+Die Tatsache, dass der Datenaustausch bei den eingesetzten Systemen mit dem XML--Branchenstandard OTA von statten geht, ist für den Betrieb zunächst nicht von direktem Interesse. Indirekt werden durch das einheitliche XML--Schema alle beteiligten Komponenten, auch der Channel--Manager selbst, austauschbar. Für den Channel--Manager ist es ohne Probleme möglich, weitere Buchungskanäle auf Basis dieses Schemas zu unterstützen. 
 
-Das Einbinden weiterer vom Channel--Manager unterstützter Buchungskanäle ist somit technisch somit kein Problem. Es ist  im wesentlichen eine Entscheidung der Hotelleitung, die zwischen den zu erwartenden Buchungen und der Provision des Anbieters abwägen muss.
+Das Einbinden weiterer vom Channel--Manager unterstützter Buchungskanäle ist technisch somit kein Problem. Es ist  im wesentlichen eine Entscheidung der Hotelleitung, die zwischen den zu erwartenden Buchungen und der Provision\footnote{Buchungsportale berechnen i.d.R. 15\% des gebuchten Umsatzes, der Channel--Manager nochmals 0,8\% (Stand Dezember 2012)} des Anbieters abwägen muss.
+
+Betrachtet man den Markt aus Abbildung 1 als ein Gesamtsystem, dann nimmt der Channel--Manager die Rolle einer \textbf{Middleware} ein, die nach dem Hub--and--Spokes Prinzip zwischen verschiedenen Komponenten --- nämlich den PMS verschiedener Hotels einerseits und den verschiedenen Buchungsmöglichkeiten andererseits --- vermittelt.
+
+Jedes der beteiligten Systeme hält die benötigten Daten jedoch in eigenen Datenbanken vor. Aufgrund der \textbf{fehlenden Datenintegration} ist es durch Übermittlungsfehler oder mehreren, gleichzeitigen Buchungen über unterschiedliche Portale möglich, dass Zimmer bestätigt aber nicht gebucht bzw. überbucht werden.
+
