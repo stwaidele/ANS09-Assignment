@@ -33,6 +33,14 @@ bibliography=totoc
 ]
 {scrartcl}
 
+\usepackage{geometry}
+\geometry{a4paper, left=45mm, right=20mm, top=30mm, bottom=30mm}
+
+% Hurenkinder und Schusterjungen verhindern
+\clubpenalty10000
+\widowpenalty10000
+\displaywidowpenalty=10000
+
 %\pagestyle{empty}		% keine Kopf und Fußzeile (k. Seitenzahl)
 %\pagestyle{headings}	% lebender Kolumnentitel  
 
@@ -113,6 +121,27 @@ bibliography=totoc
 %\bibliography{Literatur}	% Sie benötigen eine *.bib-Datei
 
 %% Bibliographie unter Verwendung von BibLaTeX %%%%%%%%%%%%%%%%%%%%%%%%%%
+\flushleft
+\setlength{\bibitemsep}{1em}
 \printbibliography
+
+\clearpage
+
+\pagestyle{empty} 
+\thispagestyle{empty}
+
+\begin{center}
+{\Large Eidesstattliche Erkl"arung}
+\vspace*{4cm}\end{center}
+\noindent
+Ich versichere, dass ich das beiliegende Assignment selbstst"andig verfasst, keine anderen als die angegebenen Quellen und Hilfsmittel benutzt sowie alle w"ortlich oder sinngem"a"s "ubernommenen Stellen in der Arbeit gekennzeichnet habe. 
+\vspace{3cm}
+
+\hspace{-0.8cm}
+\rule[0.5ex]{6.5cm}{1pt}
+\hspace{1.3cm}
+\rule[0.5ex]{6.5cm}{1pt}\\
+(Datum, Ort)
+\hspace{6.3cm}(Unterschrift)
 
 \end{document}

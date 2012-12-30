@@ -1,7 +1,7 @@
 %\clearpage
 \section{Hotelreservierung}
 
-Das im Einsatz befindliche Property Management System\footnote{"`HS/3 Hotelsoftware"'} vereint verschiedene Funktionen der Module "`Rezeption"', "`Finanzen"', "`Marketing"' und "`Reporting"' unter einer einheitlichen Programmoberfläche. Die Module nutzen auch eine einheitliche Datenbasis in Form einer SQL--Datenbank, welche durch ein nur dem Hersteller bekannten Passworts gegen Zugriffe von außen geschützt ist.
+Das im Einsatz befindliche Property Management System\footnote{"`HS/3 Hotelsoftware"'; weitere Informationen unter http://www.hs3-hotelsoftware.de/} vereint verschiedene Funktionen der Module "`Rezeption"', "`Finanzen"', "`Marketing"' und "`Reporting"' unter einer einheitlichen Programmoberfläche. Die Module nutzen auch eine einheitliche Datenbasis in Form einer SQL--Datenbank, welche durch ein nur dem Hersteller bekannten Passworts gegen Zugriffe von außen geschützt ist.
 
 Es handelt sich hierbei also um ein System, in dem die Prinzipien der Daten--, Funktions-- und Programmintegration berücksichtigt. Dies bildet auch den Alltag des beschriebenen Betriebs ab, da in dieser Betriebsgröße die abgedeckten Funktionen nicht von getrennten Abteilungen, sondern von einem oder wenigen abteilungsübergreifend eingesetzten Mitarbeitern ausgeführt werden.
 
@@ -40,23 +40,24 @@ Hotelgäste buchen im Internet i.d.R. über das Web--Interface einer Online--Buchu
 
 Im betrachteten Betrieb werden zwei Buchungsplattformen\footnote{"`HRS.de"' und "`Booking.com"'} genutzt. Des weiteren ist das Hotel über ein Buchungsformular auf der eigenen Website\footnote{Buchungsformular unter http://krone-neuenburg.de/hotel/reservation/} buchbar. Somit müssen drei Systeme mit möglichst aktuellen Daten des Front--Officesystems versorgt werden.
 
-Diese Aufgabe wird von einem weiteren System, dem Channel--Manager übernommen. Das Hotelprogramm sendet Raten und Verfügbarkeiten nur an bzw. empfängt Buchungen nur von diesem einen System. Der Channel--Manager\footnote{"`CultSwich"'} ist somit die Schnittstelle zu den verschiedenen Buchungssystemen. Er stellt auch die Buchungsmaske zur Verfügung, die auf der hoteleigenen Website eingebunden werden kann. Die Buchungen der Gäste werden über den Channel--Manager direkt in das Front--Officesystem eingebucht.
+Diese Aufgabe wird von einem weiteren System, dem Channel--Manager übernommen. Das Hotelprogramm sendet Raten und Verfügbarkeiten nur an bzw. empfängt Buchungen nur von diesem einen System. Der Channel--Manager\footnote{"`CultSwich"'; weitere Informationen unter http://www.cultuzz.de/} ist somit die Schnittstelle zu den verschiedenen Buchungssystemen. Er stellt auch die Buchungsmaske zur Verfügung, die auf der hoteleigenen Website eingebunden werden kann. Die Buchungen der Gäste werden über den Channel--Manager direkt in das Front--Officesystem eingebucht. Dieser Datenfluss ist in Abbildung \ref{figih} skizziert. 
 
-Dieser Datenfluss ist in der folgenden Abbildung skizziert. Der Vollständigkeit wegen enthält diese Zeichnung noch die Direktbuchung, bei der der Gast persönlich, per Telefon oder auch schriftlich (Brief, Fax oder E--Mail) mit dem Hotel in Kontakt tritt. Als weiterer Buchungsweg ist auch die Anbindung von Reisebüros dargestellt.
-
-\begin{figure}
+\begin{figure}[h!t]
 \includegraphics[width=\hsize]{IH}
 \caption[Informationsflüsse bei Hotelbuchungen]{Informationsflüsse bei Hotelbuchungen, basierend auf \cite{cultuzz}}
+\label{figih}
 \end{figure}
+
+Die meisten der genutzten Systeme nutzen zum Datenaustausch das vom Branchenverband OpenTravel definierte OTA XML--Schema\footnote{vgl. \cite{otafaq}}. Der Vollständigkeit wegen enthält diese Zeichnung noch die Direktbuchung, bei der der Gast persönlich, per Telefon oder auch schriftlich (Brief, Fax oder E--Mail) mit dem Hotel in Kontakt tritt. Als weiterer Buchungsweg ist auch die Anbindung von Reisebüros über eine proprietäre Schnittstelle\footnote{vgl. \cite{amadeusir}} dargestellt.
 
 
 \subsubsection{Bewertung}
 
-Wie in Abbildung 1 zu sehen ist, stehen zwischen Hotel und Gast je nach Buchungsweg bis zu drei Mittler. Jedes dieser Systeme wird von seperaten Unternehmen betrieben, womit sich mit Hotel und Gast somit eine Buchungskette mit fünf beteiligten Parteien und deren Interessen besteht. Dieser Prozess läuft hochintegriert ab. Die Daten werden früh (direkt vom Gast) erfasst und anschließend ohne weitere Benutzereingriffe bis hin zum PMS weitergeleitet.
+Wie in Abbildung \ref{figih} zu sehen ist, stehen zwischen Hotel und Gast je nach Buchungsweg bis zu drei Mittler. Jedes dieser Systeme wird von seperaten Unternehmen betrieben, womit sich mit Hotel und Gast somit eine Buchungskette mit fünf beteiligten Parteien und deren Interessen besteht. Dieser Prozess läuft hochintegriert ab. Die Daten werden früh (direkt vom Gast) erfasst und anschließend ohne weitere Benutzereingriffe bis hin zum PMS weitergeleitet.
 
 Bei dieser \textbf{Prozessintegration über mehrere Unternehmensgrenzen} hinweg spielt der Channel--Manager eine zentrale Rolle: Zunächst ist er diejenige Komponente des Systems, die für den täglichen Arbeitsablauf im Hotel den größten Nutzen bringt. Aufgrund der Tatsache, dass Buchungsplattformen keine direkte Schnittstelle zum Hotelprogrammen anbieten, wird durch den Channel--Manager die Automatisierung des Datenabgleichs überhaupt erst möglich. Desweiteren wird die Anzahl der notwendigen Schnittstellen von einer pro Buchungskanal auf eine einzige für den Channel--Manager reduziert.
 
-Die Tatsache, dass der Datenaustausch bei den eingesetzten Systemen mit dem XML--Branchenstandard OTA von statten geht, ist für den Betrieb zunächst nicht von direktem Interesse. Indirekt werden durch das einheitliche XML--Schema alle beteiligten Komponenten, auch der Channel--Manager selbst, austauschbar. Für den Channel--Manager ist es ohne Probleme möglich, weitere Buchungskanäle auf Basis dieses Schemas zu unterstützen. 
+Die Tatsache, dass der Datenaustausch bei den eingesetzten Systemen mit dem XML--Branchenstandard OTA von statten geht, ist für den Betrieb zunächst nicht von direktem Interesse. Indirekt werden durch das einheitliche XML--Schema alle beteiligten Komponenten, auch der Channel--Manager selbst, austauschbar. Für den Channel--Manager ist es ohne Probleme möglich, weitere Buchungskanäle auf Basis dieses Schemas zu unterstützen. Für Buchungskanäle, die ein anderes Format für den Datenaustausch verwenden, muss eine Schnittstelle erstellt werden.
 
 Das Einbinden weiterer vom Channel--Manager unterstützter Buchungskanäle ist technisch somit kein Problem. Es ist  im wesentlichen eine Entscheidung der Hotelleitung, die zwischen den zu erwartenden Buchungen und der Provision\footnote{Buchungsportale berechnen i.d.R. 15\% des gebuchten Umsatzes, der Channel--Manager nochmals 0,8\% (Stand Dezember 2012)} des Anbieters abwägen muss.
 
