@@ -35,11 +35,15 @@ bibliography=totoc
 
 \usepackage{geometry}
 \geometry{a4paper, left=45mm, right=20mm, top=30mm, bottom=30mm}
+% http://www.macuser.de/forum/f19/latex-zeilenabstand-aendern-189206/
+\usepackage{setspace}
 
 % Hurenkinder und Schusterjungen verhindern
 \clubpenalty10000
 \widowpenalty10000
 \displaywidowpenalty=10000
+
+\usepackage[flushmargin,hang,ragged]{footmisc}
 
 %\pagestyle{empty}		% keine Kopf und Fußzeile (k. Seitenzahl)
 %\pagestyle{headings}	% lebender Kolumnentitel  
@@ -75,7 +79,7 @@ bibliography=totoc
 %%   .eps  .ps  .bmp  .pict  .pntg
 
 %% Bibliographiestil %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[style=authortitle-icomp,backend=bibtex8]{biblatex}
+\usepackage[style=authoryear,backend=bibtex8]{biblatex}
 \usepackage[babel,german=quotes]{csquotes}
 %\addbibresource{Literatur.bib}
 \bibliography{./Literatur}
@@ -101,18 +105,19 @@ bibliography=totoc
 \tableofcontents			% Inhaltsverzeichnis
 %\listoftables				% Tabellenverzeichnis
 \listoffigures				% Abbildungsverzeichnis
-\newpage
+\clearpage
 
 
 %% Der Text %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagestyle{headings}
+\begin{onehalfspacing}
 \input{Einleitung.tex}
 \input{Grundlagen.tex}
 \input{Restaurant.tex}
 \input{Hotel.tex}
 \input{Ausblick.tex}
 \input{Fazit.tex}
-
+\end{onehalfspacing}
 
 %% Bibliographie unter Verwendung von dinnat %%%%%%%%%%%%%%%%%%%%%%%%%%
 %\setbibpreamble{Präambel}		% Text vor dem Verzeichnis
@@ -121,6 +126,7 @@ bibliography=totoc
 %\bibliography{Literatur}	% Sie benötigen eine *.bib-Datei
 
 %% Bibliographie unter Verwendung von BibLaTeX %%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
 \flushleft
 \setlength{\bibitemsep}{1em}
 \printbibliography
@@ -130,18 +136,16 @@ bibliography=totoc
 \pagestyle{empty} 
 \thispagestyle{empty}
 
-\begin{center}
-{\Large Eidesstattliche Erkl"arung}
-\vspace*{4cm}\end{center}
-\noindent
+\textsc{\Large Eidesstattliche Erkl"arung}
+\vspace*{4cm}
+
 Ich versichere, dass ich das beiliegende Assignment selbstst"andig verfasst, keine anderen als die angegebenen Quellen und Hilfsmittel benutzt sowie alle w"ortlich oder sinngem"a"s "ubernommenen Stellen in der Arbeit gekennzeichnet habe. 
 \vspace{3cm}
 
-\hspace{-0.8cm}
-\rule[0.5ex]{6.5cm}{1pt}
-\hspace{1.3cm}
-\rule[0.5ex]{6.5cm}{1pt}\\
-(Datum, Ort)
-\hspace{6.3cm}(Unterschrift)
+\begin{tabbing}
+Neuenburg am Rhein, \today \hspace{1em} \=\rule[-0.8ex]{6.5cm}{0.75pt}\\
+                \>(Stefan Waidele) 
+\end{tabbing}
+
 
 \end{document}

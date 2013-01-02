@@ -17,7 +17,7 @@ Die ausgedruckten Berichte stellen die Schnittstelle zur Buchhaltung und zum Man
 
 Auch ist zu beachten, dass die Berichtsdaten zwar laufend aktualisiert werden, es jedoch notwendig ist, die Berichte manuell auszudrucken. Hierbei sind zwei Modi möglich: Der X--Abschlag, der die aufgelaufenen Daten auswertet und ausgibt, sowie der Z--Abschlag, der die Register nach dem Ausdruck auf Null setzt. Beiden Modi ist gemeinsam, dass die Auswertung der Daten nur zum Zeitpunkt des Ausdrucks ausgewertet werden. 
 
-So ist ein Tagesbericht tatsächlich nur zwischen dem Ende der letzen Schicht und vor dem Beginn der ersten Schicht des Folgetages möglich. Der Monatsbericht muss nach dem Tagesabschluss des letzten Tags des Monats, vor dem ersten Geschäftsvorgang des Folgemonats durchzuführen. Wir dies nicht beachtet, so wird die Qualität der Daten deutlich verschlechtert.
+So ist ein Tagesbericht tatsächlich nur zwischen dem Ende der letzen Schicht und vor dem Beginn der ersten Schicht des Folgetages möglich. Der Monatsbericht muss nach dem Tagesabschluss des letzten Tags des Monats, vor dem ersten Geschäftsvorgang des Folgemonats durchgeführt werden. Wird dies nicht beachtet, so wird die Qualität der Daten aufgrund der uneinheitlichen Zeiträumen deutlich verschlechtert.
 
 \subsubsection{Bewertung}
 
@@ -31,16 +31,16 @@ Eine integrierte Datenspeicherung würde hier einerseits eine Erleichterung der t
 \label{intposman}
 \subsubsection{Beschreibung}
 
-Sowohl das Angebot an Speisen und Getränken als auch die Preise werden vom Management bestimmt. Grundlage heirfür ist die Kalkukulation, die im Tabellenverarbeitungssystem durchgeführt wird. Die ermittelten Preise werden dann in der Schnittstellenanwendung CEP dem jeweiligen Artikel zugeordnet. Hier werden auch Einstellungen bezüglich der Mehrwertsteuer, eventuellen Optionen (z.B. "`medium"' oder "`durch"') und den zu benutzten Bondruckern getätigt.
+Sowohl das Angebot an Speisen und Getränken als auch die Preise werden vom Management bestimmt. Grundlage heirfür ist die Kalkukulation, die im Tabellenverarbeitungssystem durchgeführt wird. Die ermittelten Preise werden dann in der Schnittstellenanwendung dem jeweiligen Artikel zugeordnet. Hier werden auch Einstellungen bezüglich der Mehrwertsteuer, eventuellen Optionen (z.B. "`medium"' oder "`durch"') und den zu benutzten Bondruckern getätigt.
 
-Das POS--System wird allerdings auch ohne die Schnittstellensoftware verkauft. Daher können die gleichen Einstellungen auch direkt am POS--Terminal getätigt werden. Von dieser Möglichkeit wird gebrauch gemacht, wenn einzelne Preise schnell geändert werden sollen, z.B. auch bei der täglichen Eingabe der Preise vom Chefkoch bestimmten Preise für das Tagesmenü durch die Servierkräfte.
+Das POS--System wird allerdings auch ohne die Schnittstellensoftware verkauft. Daher können die gleichen Einstellungen auch direkt am POS--Terminal getätigt werden. Von dieser Möglichkeit wird Gebrauch gemacht, wenn einzelne Preise schnell geändert werden sollen\footnote{z.B. bei der täglichen Eingabe der Preise vom Chefkoch bestimmten Preise für das Tagesmenü durch die Servierkräfte}.
 
-Obwohl das POS-Terminal und die Software CEP vom gleichen Hersteller stammen und aufeinander abgestimmt sind, werden die jeweiligen Daten unabhängig voneinander gespeichert. Eine Übertragung vom bzw. zum Terminal findet nur nach einem entsprechenden Befehl statt. Der Datenabgleich muss somit immer manuell angestoßen werden. Eventuelle Syncronisierungskonflikte werden hierbei nicht angezeigt. Hierdurch können aktualisierte Daten unbemerkt wieder durch alte Versionen überschrieben werden.
+Obwohl das POS-Terminal und die Schnittstellenanwendung vom gleichen Hersteller stammen und aufeinander abgestimmt sind, werden die jeweiligen Daten unabhängig voneinander gespeichert. Eine Übertragung vom bzw. zum Terminal findet nur nach einem entsprechenden Befehl statt. Der Datenabgleich muss somit immer manuell angestoßen werden. Eventuelle Synchronisierungskonflikte werden hierbei nicht angezeigt. Hierdurch können aktualisierte Daten unbemerkt wieder durch alte Versionen überschrieben werden.
 
 \subsubsection{Bewertung}
 
-Da hier deutlich weniger bzw. seltener Daten übertragen werden ist der \textbf{Medienbruch} zwischen Management und Restaurantkasse ist weniger gravierend als der im vorhergehenden Abschnitt beschriebene zur Buchhaltung.
-Jedoch bringt die \textbf{redundante Datenhaltung} weitreichende und schwer zu erkennende Syncronisationsprobleme mit sich. 
+Da hier deutlich weniger bzw. seltener Daten übertragen werden ist der \textbf{Medienbruch} zwischen Management und Restaurantkasse weniger gravierend als der im vorhergehenden Abschnitt beschriebene zur Buchhaltung.
+Jedoch bringt die \textbf{redundante Datenhaltung} weitreichende und schwer zu erkennende Synchronisationsprobleme mit sich. 
 
 Eine integrierte Lösung würde hier sowohl eine Arbeitserleichterung als auch Schutz vor Datenverlust bringen.
 

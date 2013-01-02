@@ -3,7 +3,7 @@
 
 Das im Einsatz befindliche Property Management System\footnote{"`HS/3 Hotelsoftware"'; weitere Informationen unter http://www.hs3-hotelsoftware.de/} vereint verschiedene Funktionen der Module "`Rezeption"', "`Finanzen"', "`Marketing"' und "`Reporting"' unter einer einheitlichen Programmoberfläche. Die Module nutzen auch eine einheitliche Datenbasis in Form einer SQL--Datenbank, welche durch ein nur dem Hersteller bekannten Passworts gegen Zugriffe von außen geschützt ist.
 
-Es handelt sich hierbei also um ein System, in dem die Prinzipien der Daten--, Funktions-- und Programmintegration berücksichtigt. Dies bildet auch den Alltag des beschriebenen Betriebs ab, da in dieser Betriebsgröße die abgedeckten Funktionen nicht von getrennten Abteilungen, sondern von einem oder wenigen abteilungsübergreifend eingesetzten Mitarbeitern ausgeführt werden.
+Es handelt sich hierbei also um ein System, in dem die Prinzipien der Daten--, Funktions-- und Programmintegration berücksichtigt werden. Dies bildet auch den Alltag des beschriebenen Betriebs ab, da in dieser Betriebsgröße die abgedeckten Funktionen nicht von getrennten Abteilungen, sondern von einem oder wenigen abteilungsübergreifend eingesetzten Mitarbeitern ausgeführt werden.
 
 Für einen reinen Hotelbetrieb ohne weitere Betriebszweige ist dieses System auch vom Funktionsumfang her ausreichend. Es können die Aufgaben der Buchhaltung in Form eines Kassenbuchs und einer Debitorenverwaltung erfüllt werden. Außerdem wird das Management durch eine Reihe von Auswertungen und Berichten unterstützt. Integrationsbedarf entsteht also hauptsächlich dadurch, dass der Betrieb durch seine Größe mehrere Betriebszweige vereint.
 
@@ -32,11 +32,11 @@ Sobald jedoch die Hotelinformationen mit den Daten der anderen Betriebszweigen v
 
 \subsection{Schnittstelle zu Buchungsportalen im Internet}
 
-Das Internet hat sich zu einem bedeutenden Vertriebsweg für Hotelbuchungen entwickelt. Hierbei ist zu beachten, dass es sich hierbei nicht um einen homogenen Vertriebskanal handelt, sondern verschiedene Vertriebskanäle nutzen das Internet als Medium. Aufgrund der großen Anzahl von beteiligten Geschäftspartnern ist der mögliche Nutzen eines hohen Integrationsniveaus besonders groß.
+Das Internet hat sich zu einem bedeutenden Vertriebsweg für Hotelbuchungen entwickelt. Hierbei ist zu beachten, dass es sich hierbei nicht um einen homogenen Vertriebskanal handelt, sondern verschiedene Vertriebskanäle nutzen das Internet als Medium. Aufgrund der Anzahl von beteiligten Geschäftspartnern ist der mögliche Nutzen eines hohen Integrationsniveaus besonders groß.
 
 \subsubsection{Beschreibung}
 
-Hotelgäste buchen im Internet i.d.R. über das Web--Interface einer Online--Buchungs\-plattform. Hierfür ist es notwendig, dass das Hotel seine verfügbaren Zimmer und die entsprechenden Preise (Raten) für jede buchbare Nacht an die Buchungsplattform meldet. Die getätigten Buchungen werden dann an das Hotel weitergegeben und dort im Front--Office--System eingebucht. Hierbei ist beachtenswert, dass das Buchungsportal die Zimmerreservierung dem Gast gegenüber alleine aufgrund der gemeldeten Verfügbarkeit bestätigt. Bei manueller Meldung besteht hier bereits bei einer Buchungsplattform die Gefahr, dass aufgrund von Verzögerungen im Ablauf zu Überbuchungen oder entgangenen Umsätzen kommen.
+Hotelgäste buchen im Internet i.d.R. über das Web--Interface einer Online--Buchungs\-plattform. Hierfür ist es notwendig, dass das Hotel seine verfügbaren Zimmer und die entsprechenden Preise (Raten) für jede buchbare Nacht an die Buchungsplattform meldet. Die getätigten Buchungen werden dann an das Hotel weitergegeben und dort im Front--Office--System eingebucht. Hierbei ist beachtenswert, dass das Buchungsportal die Zimmerreservierung dem Gast gegenüber alleine aufgrund der gemeldeten Verfügbarkeit bestätigt. Bei manueller Meldung besteht hier bereits bei einer Buchungsplattform die Gefahr, dass es aufgrund von Verzögerungen im Ablauf zu Überbuchungen oder entgangenen Umsätzen kommen kann.
 
 Im betrachteten Betrieb werden zwei Buchungsplattformen\footnote{"`HRS.de"' und "`Booking.com"'} genutzt. Des weiteren ist das Hotel über ein Buchungsformular auf der eigenen Website\footnote{Buchungsformular unter http://krone-neuenburg.de/hotel/reservation/} buchbar. Somit müssen drei Systeme mit möglichst aktuellen Daten des Front--Officesystems versorgt werden.
 
@@ -53,7 +53,7 @@ Die meisten der genutzten Systeme nutzen zum Datenaustausch das vom Branchenverb
 
 \subsubsection{Bewertung}
 
-Wie in Abbildung \ref{figih} zu sehen ist, stehen zwischen Hotel und Gast je nach Buchungsweg bis zu drei Mittler. Jedes dieser Systeme wird von seperaten Unternehmen betrieben, womit sich mit Hotel und Gast somit eine Buchungskette mit fünf beteiligten Parteien und deren Interessen besteht. Dieser Prozess läuft hochintegriert ab. Die Daten werden früh (direkt vom Gast) erfasst und anschließend ohne weitere Benutzereingriffe bis hin zum PMS weitergeleitet.
+Wie in Abbildung \ref{figih} zu sehen ist, stehen zwischen Hotel und Gast je nach Buchungsweg bis zu drei Mittler. Jedes dieser Systeme wird von seperaten Unternehmen betrieben, womit sich, Hotel und Gast eingerechnet, eine Buchungskette mit fünf beteiligten Parteien und deren Interessen besteht. Dieser Prozess läuft hochintegriert ab. Die Daten werden früh (direkt vom Gast) erfasst und anschließend ohne weitere Benutzereingriffe bis hin zum PMS weitergeleitet.
 
 Bei dieser \textbf{Prozessintegration über mehrere Unternehmensgrenzen} hinweg spielt der Channel--Manager eine zentrale Rolle: Zunächst ist er diejenige Komponente des Systems, die für den täglichen Arbeitsablauf im Hotel den größten Nutzen bringt. Aufgrund der Tatsache, dass Buchungsplattformen keine direkte Schnittstelle zum Hotelprogrammen anbieten, wird durch den Channel--Manager die Automatisierung des Datenabgleichs überhaupt erst möglich. Desweiteren wird die Anzahl der notwendigen Schnittstellen von einer pro Buchungskanal auf eine einzige für den Channel--Manager reduziert.
 
@@ -63,5 +63,5 @@ Das Einbinden weiterer vom Channel--Manager unterstützter Buchungskanäle ist tec
 
 Betrachtet man den Markt aus Abbildung 1 als ein Gesamtsystem, dann nimmt der Channel--Manager die Rolle einer \textbf{Middleware} ein, die nach dem Hub--and--Spokes Prinzip zwischen verschiedenen Komponenten --- nämlich den PMS verschiedener Hotels einerseits und den verschiedenen Buchungsmöglichkeiten andererseits --- vermittelt.
 
-Jedes der beteiligten Systeme hält die benötigten Daten jedoch in eigenen Datenbanken vor. Aufgrund der \textbf{fehlenden Datenintegration} ist es durch Übermittlungsfehler oder mehreren, gleichzeitigen Buchungen über unterschiedliche Portale möglich, dass Zimmer bestätigt aber nicht gebucht bzw. überbucht werden.
+Jedes der beteiligten Systeme hält die benötigten Daten jedoch in eigenen Datenbanken vor. Aufgrund der \textbf{fehlenden Datenintegration} ist es durch Übermittlungsfehler oder mehreren, gleichzeitigen Buchungen über unterschiedliche Portale möglich, dass Zimmer bestätigt aber nicht gebucht werden bzw. dass es zu Überbuchungen kommt.
 
